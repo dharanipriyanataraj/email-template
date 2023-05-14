@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Welcome Email Template</title>	
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+		body {
+			margin: 0;			
+			height: 100%;
+			width: 100%;
+		}
+		a {
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		.wrapper {
+			background-color: #E0ECE0;
+			height: 100%;
+			width: 100%;
+		}
+		.main {
+			width: 80%;
+			padding-top: 50px;
+		}
+		.welcome-text th {
+			font-family: sans-serif;
+		    font-weight: 400;
+		    font-size: 18px;
+		    padding-top: 10px;
+		}
+		.template-body {
+			width: 80%;
+			margin: 0 auto;						
+		}
+		.template-body-content {
+			margin-top: 30px;			
+			background-color: #fff;
+			padding: 20px 20px 60px;
+		}
+		.welcome-text-body {			
+		    font-weight: 600;
+		    font-size: 18px;
+		    padding: 10px 0;
+		}
+		.welcome-success-message {
+		    font-weight: 400;
+		    font-size: 15px;
+		    color: #6C757D;
+		    padding: 10px 0 20px;
+		}
+		.welcome-content img {
+			width: 100%;
+			border-radius: 10px;
+		}
+		.tempalate-message .hi-message {
+			font-weight: 600;
+			padding: 10px 0;
+			color: #363A57;
+		}
+		.tempalate-message .impacteers-details {
+			color: #6C757D;
+		    padding: 10px 0 20px;
+		}
+		.explore-content {
+			margin-top: 20px;
+			border-spacing: 0 30px;
+		}
+		.explore-content-head h3 {
+		    font-size: 20px;
+    		color: #363A57;
+		}
+		.explore-content-head p {
+			margin-top: 10px;
+			font-size: 15px;
+			color: #999FAF;
+		}
+		.explore-content-details td div {
+			display: inline-block;
+		}
+		.explore-content-details td img {
+		    width: 25px;
+		    height: 25px;
+		    margin-right: 10px;
+		    vertical-align: top;
+		   	mix-blend-mode: multiply;
+		}
+		.explore-content-details td .explore-points .explore-points-title {
+			font-weight: 600;
+			margin-bottom: 5px;
+			color: #363A57;
+		}
+		.explore-content-details td .explore-points .explore-points-desc {
+			color: #363A57;
+		}
+		.explore-now-cta {
+			margin-top: 50px;
+		}
+		.explore-now-cta a[href] {
+			padding: 10px 20px;
+			border-radius: 3px;
+			font-weight: 500;
+			background-color: #22AF6A;
+			color: #fff;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		.get-app-container {
+			margin-top: 100px;
+			padding: 0 20px;
+		}
+		.get-app-container * {
+		    vertical-align: top;
+		}
+		.get-app-content,
+		.get-app-image {
+			width: 50%;
+		}
+		.get-app-content h3 {
+			font-weight: 500;
+			font-size: 22px;
+			color: #212529;
+		}
+		.get-app-content p {
+		    margin: 20px 0 30px;
+		    color: #636363;
+		    font-size: 16px;
+		    line-height: 1.5;
+		}
+		.get-app-content .get-app-link img {
+			width: 160px;
+			mix-blend-mode: multiply;			
+		}
+		.get-app-image img {
+			width: 100%;
+			mix-blend-mode: multiply;	
+		}
+		.our-partners table {
+			width: 100%;
+			margin-bottom: 70px;
+		}
+		.our-partners h3 {
+		    text-align: center;
+		    font-size: 26px;
+		    font-weight: 400;
+		    margin: 60px 0 40px;
+		    color: #6D767E;
+		}
+		.our-partners table td {
+			text-align: center;			
+		}
+		.our-partners td img {
+			height: 30px;
+			cursor: pointer;
+			opacity: 0.4;
+			mix-blend-mode: multiply;	
+		}
+		.our-partners td img:hover {
+			opacity: 1;
+		}
+		.regards {
+			padding: 0 70px;
+		}
+		.regards .regards-text {
+			font-size: 16px;
+			font-weight: 600;
+			color: #6C757D;
+			margin-bottom: 15px;
+		}
+		.regards .regards-team {
+			font-size: 16px;
+			color: #6C757D;
+			margin-bottom: 20px;
+		}
+		.template-footer {
+			text-align: center;
+			border-spacing: 15px;
+			margin: 60px auto 0;
+		}
+		.template-footer tr td,
+		.template-footer tr td a[href] {
+			color: #6C757D;
+		}
+		.template-footer-links a[href] {
+			padding: 0 10px;
+			border-right: 1px solid #6C757D;
+			color: #6C757D;
+		}
+		.template-footer-links a:first-child {
+			padding-left: 0;
+		}
+		.template-footer-links a:last-child {
+			border:  0;
+		}
+		.template-social-logo td {
+			padding-top: 30px;
+		}
+		.template-social-logo td a,
+		.template-social-logo td a:hover {
+			text-decoration: none;
+		}
+		.template-social-logo img {
+			display: inline-block;
+			width: 30px;
+			height: 30px;			
+			padding: 0 15px;			
+			mix-blend-mode: multiply;			
+			opacity: 0.3;
+		}
+		.template-social-logo img:hover {
+			opacity: 1;
+		}
+		@media only screen and (max-width: 600px) {
+			.explore-content-details td {
+				display: block;
+				margin-bottom: 20px !important;
+			}
+			.explore-content-details td img {
+				margin-bottom: 10px !important;
+			}
+			.explore-now-cta {
+				margin-top: 20px !important;
+			}
+			.get-app-container {
+				margin-top: 50px !important;
+			}
+			.get-app-content .get-app-link img {
+				margin-bottom: 20px !important;
+			}
+			.our-partners table tr {
+				display: flex;
+			    flex-wrap: wrap;
+			    row-gap: 20px;
+			    column-gap: 20px;
+			    justify-content: center;
+			}
+			.regards {
+				padding: 0px !important;
+			}
+			.template-footer tr td,
+			.template-footer tr td.template-footer-links {
+				line-height: 2;
+			}
+			.template-social-logo img {
+				padding: 0 5px !important;
+			}
+		}
+		@media (prefers-color-scheme: dark) {
+			.template-body-content {
+				background-color: #fff;
+			}
+		}
+	</style>
+</head>
+<body>
+	<center class="wrapper">
+		<table class="main">
+			<!-- template header -->
+			<tr>
+				<th>
+					<img src="https://live.staticflickr.com/65535/52892893663_b2a27b7414_m.jpg" style="width: 60px; margin: 10px;">
+				</th>				
+			</tr>
+			<tr class="welcome-text">
+				<th>welcome to impacteers.club</th>
+			</tr>
+
+			<!-- template body -->
+			<tr class="template-body">
+				<td>
+					<table class="template-body-content">
+						<!-- welcome text -->
+						<tr>
+							<td class="welcome-content">
+								<p class="welcome-text-body">Welcome! impacteers.club</p>
+								<p class="welcome-success-message">You have successfully registration on impacteers.club</p>
+								<img src="https://live.staticflickr.com/65535/52892436266_2fd4ac915e_m.jpg">
+							</td>
+						</tr>
+						<!-- template text -->
+						<tr>
+							<td class="tempalate-message">
+								<p class="hi-message">Hey <span class="username-text">User name</span>,</p>
+								<p class="impacteers-details">
+									Thanks you for joining with impacteers.club. We have more than a 20K million Readers each month. Keeping you up to date with whats going on in the world.
+								</p>
+							</td>
+						</tr>
+						<!-- explore impacteers text -->
+						<tr>
+							<td>
+								<table class="explore-content">
+									<tr class="explore-content-head">
+										<td colspan="2">
+											<h3>Explore our impacteers.club</h3>
+											<p>Chat with specialist. No-Contact delivery. All right here.</p>
+										</td>
+									</tr>
+									<tr class="explore-content-details">
+										<td>										
+											<img src="https://live.staticflickr.com/65535/52893121147_73f26c63b2_n.jpg">
+											<div class="explore-points">
+												<p class="explore-points-title">Meet your new professional network</p>
+												<p class="explore-points-desc">Two-hour courier delivery. Or easy pickup</p>
+											</div>
+										</td>
+										<td>
+											<img src="https://live.staticflickr.com/65535/52893121147_73f26c63b2_n.jpg">
+											<div class="explore-points">
+												<p class="explore-points-title">Personal branding</p>
+												<p class="explore-points-desc">Two-hour courier delivery. Or easy pickup</p>
+											</div>										
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<!-- explore now cta -->
+						<tr>
+							<td class="explore-now-cta" colspan="3">
+								<center class="explore-now-cta">
+									<a href="https://www.impacteers.club/">Explore Now</a>
+								</center>
+							</td>
+						</tr>
+						<!-- get app content -->
+						<tr>
+							<td colspan="2">
+								<table class="get-app-container">
+									<tbody>
+										<tr>
+											<td class="get-app-content">
+												<h3>Get our impacteers.club app!</h3>																						
+												<p>Get the most of Pimpacteers.club by installing our mobile app. You can log in by using your existing emails address and password</p>											
+												<div class="get-app-link">
+													<img src="https://live.staticflickr.com/65535/52897031225_1a41342872_w.jpg">
+													<img src="https://live.staticflickr.com/65535/52896639181_3bc23eb0c0_w.jpg">
+												</div>
+											</td>										
+											<td class="get-app-image">
+												<img src="https://live.staticflickr.com/65535/52891866927_0da9627cd3_m.jpg">
+											</td>
+										</tr>
+									</tbody>																								
+								</table>
+							</td>						
+						</tr>
+						<!-- partners content -->
+						<tr>
+							<td class="our-partners" colspan="2">
+								<h3>Our Partners</h3>
+								<table>
+									<tr>
+										<td>
+											<img src="https://live.staticflickr.com/65535/52892893603_b487e70543_m.jpg">
+										</td>
+										<td>
+											<img src="https://live.staticflickr.com/65535/52892436306_2683bf1851_m.jpg">
+										</td>
+										<td>
+											<img src="https://live.staticflickr.com/65535/52892893678_51eb34ea89_m.jpg">
+										</td>
+										<td>
+											<img src="https://live.staticflickr.com/65535/52892893598_f9465b28c5_m.jpg">
+										</td>
+										<td>
+											<img src="https://live.staticflickr.com/65535/52892436261_2a89d355f3_m.jpg">
+										</td>
+										<td>
+											<img src="https://live.staticflickr.com/65535/52891867047_c8f942e8bf_m.jpg">
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<!-- regards text -->
+						<tr>
+							<td class="regards">
+								<p class="regards-text">Regards,</p>
+								<p class="regards-team">Team impacteers.club</p>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>				
+			<!-- template footer -->
+			<tr>
+				<table class="template-footer">
+					<tr>
+						<td>© impacteers.club. All rights reserved.</td>
+					</tr>
+					<tr>
+						<td>If you have any questions please contact us <a href="mailto:helpdisk@impacteers.club">helpdisk@impacteers.club</a></td>
+					</tr>
+					<tr>
+						<td class="template-footer-links">
+							<a href="https://impacteers.club/terms-conditions">Terms & conditions </a>
+							<a href="https://impacteers.club/privacy-policy/">Privacy Policy</a>
+							<a href="https://impacteers.club/cookies-policy">Cookie Policy</a>
+							<a href="https://impacteers.club/cookies-policy">Community Guidelines</a>
+						</td>
+					</tr>
+					<tr class="template-social-logo">
+						<td>
+							<a href="https://www.facebook.com/impacteers.club1">
+								<img src="https://live.staticflickr.com/65535/52892962563_7407c0a7bb_n.jpg">
+							</a>
+							<a href="https://www.instagram.com/impacteers.club/">
+								<img src="https://live.staticflickr.com/65535/52891935677_71b5f70383_n.jpg">
+							</a>
+							<a href="https://www.linkedin.com/company/impacteers-club/">
+								<img src="https://live.staticflickr.com/65535/52892896450_c15b50249d_n.jpg">
+							</a>							
+							<a href="https://twitter.com/impacteers_club?lang=en">
+								<img src="https://live.staticflickr.com/65535/52891935682_7b69f0f49f_n.jpg">
+							</a>
+							<a href="https://www.youtube.com/channel/UCMO1Y0rmgPnYUl_h5B8jU3A">
+								<img src="https://live.staticflickr.com/65535/52892674664_108b28a5fc_n.jpg">
+							</a>							
+						</td>
+					</tr>
+				</table>
+			</tr>
+		</table>
+	</center>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Job Applied Email Template</title>	
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+		body {
+			margin: 0;			
+			height: 100%;
+			width: 100%;
+		}
+		a[href] {
+			text-decoration: none;
+		}
+		a[href]:hover {
+			text-decoration: underline;
+		}
+		.wrapper {
+			background-color: #E0ECE0;
+			height: 100%;
+			width: 100%;
+		}
+		.main {
+			width: 80%;
+			padding-top: 50px;
+		}
+		.welcome-text th {
+			font-family: sans-serif;
+		    font-weight: 600;
+		    font-size: 18px;
+		    padding-top: 10px;
+		}
+		.template-body {
+			width: 80%;
+			margin: 0 auto;						
+		}
+		.template-body-content {
+			width: 100%;
+			margin-top: 30px;			
+			background-color: #fff;
+			padding: 40px 40px 30px;
+		}
+		.greeting-text p {
+			color: #212529;
+			margin: 20px 0;
+			font-size: 16px;
+			line-height: 1.5;
+		}
+		.candidate-profile-container {
+			padding-top: 20px;
+		}		
+		.candidate-profile-container table .candidate-profile-content {
+			max-width: 470px !important;
+		}
+		.candidate-profile-container table td {
+			padding-right: 10px;
+		}
+		.candidate-profile-container table td:first-child {
+			vertical-align: top;
+		}
+		.candidate-profile-container table td.candidate-profile-view {
+			padding-left: 50px;
+		}
+		.candidate-profile-pic {
+			width: 10%;
+		}
+		.candidate-profile-pic img {
+			width: 100%;
+		}
+		.candidate-profile-detail h4 {
+			margin-bottom: 5px;
+		}
+		.candidate-profile-detail p {
+			font-size: 14px;
+			color: #464C53;
+		}
+		.candidate-profile-view a {
+			color: #6C757D;
+			padding: 7px 10px;
+			border: 1px solid #6C757D;
+			border-radius: 2px;
+		}
+		.candidate-profile-desc {
+			padding: 0;
+		}
+		.candidate-profile-desc p {
+			padding: 30px 0 20px;
+			color: #6C757D;
+		}
+		table.contact-info {
+			width: 100%;
+    		border-spacing: 0 20px;
+		}
+		.contact-info-title p {
+			font-weight: 600;
+			color: #212529;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #C7C8C9;
+		}
+		.contact-detail {
+			padding: 5px 0;
+		}
+		.contact-detail td:first-child {
+			color: #2F3336;
+		}
+		.contact-detail td:last-child {
+			color: #6E777F;
+		}
+		.exp-info {
+			width: 100%;
+		}		
+		.exp-info p {
+			font-weight: 600;
+			color: #212529;
+			padding-bottom: 10px;			
+		}
+		.exp-info .exp-info-title p {
+			border-bottom: 1px solid #C7C8C9;
+		}
+		.exp-info .exp-detail h4 {
+			padding: 20px 0 10px;
+			font-weight: 400;
+			color: #212529;
+		}
+		.exp-info .exp-detail p {
+			color: #717A81;
+			font-weight: 400;
+		}
+		.exp-view-link a {
+			color: #3AB87A;
+			font-size: 16px;
+			padding: 10px 0 30px;
+			display: block;
+			border-bottom: 1px solid #C7C8C9;
+		}
+		.manage-job-link {
+			text-align: center;
+			padding: 10px 0;
+		}
+		.manage-job-link a {
+			color: #3AB87A;
+			padding: 10px 0 30px;
+			font-size: 16px;
+		}
+		.template-footer {
+			text-align: center;
+			border-spacing: 15px;
+			margin: 60px auto 0;
+		}
+		.template-footer tr td,
+		.template-footer tr td a[href] {
+			color: #6C757D;
+		}
+		.template-footer-links a[href] {
+			padding: 0 10px;
+			border-right: 1px solid #6C757D;
+			color: #6C757D;
+		}
+		.template-footer-links a:first-child {
+			padding-left: 0;
+		}
+		.template-footer-links a:last-child {
+			border:  0;
+		}
+		.template-social-logo td {
+			padding-top: 30px;
+		}
+		.template-social-logo img {
+			display: inline-block;
+			width: 30px;
+			height: 30px;			
+			padding: 0 15px;			
+			mix-blend-mode: multiply;			
+			opacity: 0.3;
+		}
+		.template-social-logo img:hover {
+			opacity: 1;
+		}
+		@media only screen and (max-width: 600px) {
+			.template-body-content {
+    			padding: 30px 20px 40px;
+			}
+			.candidate-profile-container table td {
+				display: block;
+			}
+			.candidate-profile-container table td.candidate-profile-detail a {
+				margin-top: 20px !important;
+			}
+			.candidate-profile-container table td.candidate-profile-view {
+				padding: 20px 0 0 !important;
+			}
+			.candidate-profile-container table td.candidate-profile-view a {
+				margin-top: 20px !important;
+			}
+			.template-footer tr td,
+			.template-footer tr td.template-footer-links {
+				line-height: 2 !important;
+			}
+			.template-social-logo img {
+				padding: 0 5px !important;
+			}
+		}
+	</style>
+</head>
+<body>
+	<center class="wrapper">
+		<table class="main">
+			<!-- template header -->
+			<tr>
+				<th>
+					<img src="https://live.staticflickr.com/65535/52892893663_b2a27b7414_m.jpg" style="width: 60px; margin: 10px;">
+				</th>				
+			</tr>
+			<tr class="welcome-text">
+				<th>New Job Applied</th>
+			</tr>
+
+			<!-- template body -->
+			<tr class="template-body">
+				<td>
+					<table class="template-body-content">
+						<!-- greetins text -->
+						<tr>
+							<td class="greeting-text">
+								<h3>A new candidate has applied for the job, Frontend Developer</h3>								
+							</td>
+						</tr>
+						<!-- candidate profile content -->
+						<tr>
+							<td class="candidate-profile-container">
+								<table>
+									<tr class="candidate-profile-content">
+										<td class="candidate-profile-pic">
+											<img src="https://live.staticflickr.com/65535/52894343774_af49d5df64_n.jpg">
+										</td>
+										<td class="candidate-profile-detail">
+											<h4>Anand Raghunathan</h4>
+											<p class="profile-role">Full stack developer @ Google</p>
+											<p class="profile-location">Chennai, India</p>
+										</td>
+										<td class="candidate-profile-view">
+											<a href="https://www.impacteers.club/">View full Profile</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="candidate-profile-desc" colspan="3">
+											<p>I'm a freelancer who was working at a few packaging agencies, from Design Bridge to PepsiCo, working on brand strategy and a veriety of </p>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<!-- contact information -->
+						<tr>
+							<td>
+								<table class="contact-info">
+									<tr>
+										<td class="contact-info-title" colspan="2">
+											<p>Contact information</p>
+										</td>
+									</tr>
+									<tr class="contact-detail">
+										<td>Email</td>
+										<td>thintujoseph@gmail.com</td>
+									</tr>
+									<tr class="contact-detail">
+										<td>Phone</td>
+										<td>+91 9876543210</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<!-- experience info -->
+						<tr>
+							<td>
+								<table class="exp-info">
+									<tr>
+										<td class="exp-info-title" colspan="2">
+											<p>Experience</p>
+										</td>
+									</tr>
+									<tr class="exp-detail">
+										<td>
+											<h4>Senior UX UI Designer @ impacteers.club</h4>
+											<p>Jan 2021 - Present (2 yr, 1 m)</p>
+										</td>										
+									</tr>
+									<tr class="exp-detail">
+										<td>
+											<h4>UX UI Designer @ ti steps</h4>
+											<p>Jan 2019 - 2021 (2 yr, 1 m)</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="exp-view-link">
+											<a href="https://www.impacteers.club/">View all experiences (5)</a>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<!-- manage job link -->
+						<tr>
+							<td class="manage-job-link">
+								<a href="https://www.impacteers.club/">Manage jobs</a>
+							</td>
+						</tr>						
+					</table>
+				</td>
+			</tr>	
+			
+			<!-- template footer -->
+			<tr>
+				<table class="template-footer">
+					<tr>
+						<td>© impacteers.club. All rights reserved.</td>
+					</tr>
+					<tr>
+						<td>If you have any questions please contact us <a href="mailto:helpdisk@impacteers.club">helpdisk@impacteers.club</a></td>
+					</tr>
+					<tr>
+						<td class="template-footer-links">
+							<a href="https://impacteers.club/terms-conditions">Terms & conditions </a>
+							<a href="https://impacteers.club/privacy-policy/">Privacy Policy</a>
+							<a href="https://impacteers.club/cookies-policy">Cookie Policy</a>
+							<a href="https://impacteers.club/cookies-policy">Community Guidelines</a>
+						</td>
+					</tr>
+					<tr class="template-social-logo">
+						<td>
+							<a href="https://www.facebook.com/impacteers.club1">
+								<img src="https://live.staticflickr.com/65535/52892962563_7407c0a7bb_n.jpg">
+							</a>
+							<a href="https://www.instagram.com/impacteers.club/">
+								<img src="https://live.staticflickr.com/65535/52891935677_71b5f70383_n.jpg">
+							</a>
+							<a href="https://www.linkedin.com/company/impacteers-club/">
+								<img src="https://live.staticflickr.com/65535/52892896450_c15b50249d_n.jpg">
+							</a>							
+							<a href="https://twitter.com/impacteers_club?lang=en">
+								<img src="https://live.staticflickr.com/65535/52891935682_7b69f0f49f_n.jpg">
+							</a>
+							<a href="https://www.youtube.com/channel/UCMO1Y0rmgPnYUl_h5B8jU3A">
+								<img src="https://live.staticflickr.com/65535/52892674664_108b28a5fc_n.jpg">
+							</a>							
+						</td>
+					</tr>
+				</table>
+			</tr>
+		</table>
+	</center>
+</body>
+</html>
